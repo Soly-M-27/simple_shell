@@ -1,0 +1,106 @@
+.TH Simple_Shell "1" "December 9th, 2021" "v1"
+
+.SH NAME
+.B Simple_Shell (shell)
+
+.SH SYNOPSIS
+.B #include\ "main.h"
+.br
+.B shell
+
+.SH DESCRIPTION
+.B shell
+is a simple shell with basic commands from the shell bash. After taking user
+input, this input will be sent as a string through a tokenizer function to
+varify the user information and match it to the correct basic command line 
+and/or built in commands.
+
+.SH INITIALIZATION
+.B Compile with: $ gcc -Wall -Werror -Wextra -pedantic -std=gnu89 *.c main.h -o shell
+.br
+
+.SH RETURN VALUE
+.B shell
+will return the contents of the command being requested or error if command
+does not match existing function prototypes.
+
+.SH EXAMPLES
+
+==============================================================================
+.EE
+.P
+.HP 2
+$ ./shell
+.br
+.B #cisfun$ ls
+.br
+AUTHORS    builtint.c  functions.c  man_1_simple_shell   read_line.c  shell.c
+README.md  execute.c   main.h   prompt.c s   hell   tokenize.c
+.br
+.B #cisfun$
+
+.P
+.HP 2
+.br
+.B #cisfun$ cta
+.br
+"./shell: No such file or directory"
+.br
+.B #cisfun$
+
+.P
+.HP 2
+.br
+.B #cisfun$ /bin/ls -l
+.br
+total 64
+.br
+-rw-rw-r-- 1 vagrant vagrant   184 Dec  7 19:02 AUTHORS
+.br
+-rw-rw-r-- 1 vagrant vagrant  1768 Dec  7 18:58 README.md
+.br
+-rw-rw-r-- 1 vagrant vagrant  1285 Dec  7 04:46 builtint.c
+.br
+-rw-rw-r-- 1 vagrant vagrant   432 Dec  7 15:17 execute.c
+.br
+-rw-rw-r-- 1 vagrant vagrant  1798 Dec  7 15:28 functions.c
+.br
+-rw-rw-r-- 1 vagrant vagrant   607 Dec  7 15:33 main.h
+.br
+-rw-rw-r-- 1 vagrant vagrant   845 Dec  7 19:33 man_1_simple_shell
+.br
+-rw-rw-r-- 1 vagrant vagrant   193 Dec  7 02:02 prompt.c
+.br
+-rw-rw-r-- 1 vagrant vagrant   592 Dec  7 03:52 read_line.c
+.br
+-rwxrwxr-x 1 vagrant vagrant 17864 Dec  7 17:19 shell
+.br
+-rw-rw-r-- 1 vagrant vagrant   785 Dec  7 15:23 shell.c
+.br
+-rw-rw-r-- 1 vagrant vagrant   749 Dec  7 15:16 tokenize.c
+.br
+.B #cisfun$
+
+.P
+.HP 2
+.br
+.B #cisfun$ ^C
+.br
+vagrant@ubuntu-focal:~/shell_test/hell$ 
+.br
+.EX
+
+==============================================================================
+
+.SH SEE ALSO
+.I Nothing else
+
+.SH BUGS
+*EOF file unnable to control
+.br
+*Valgrind/Memory leaks
+.br
+*ls command with PATH
+
+.SH AUTHORS
+.B Amisaday Martínez Campos & Solymar Sanchez Molina
