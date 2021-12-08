@@ -7,8 +7,8 @@
  */
 int main(void)
 {
-	char *user_input, *path, *command;
-	char **tokens, **path_value;
+	char *user_input;
+	char **tokens;
 
 	while (1)
 	{
@@ -21,12 +21,12 @@ int main(void)
 		/* tokenizes user_input */
 		tokens = tokenize_input(user_input);
 
-		if ((_strcmp(tokens[0], "\n") != 0) || _strcmp(tokens[0], "env") != 0)
+		if ((_strcmp(tokens[0], "\n") != 0) && _strcmp(tokens[0], "env") != 0)
 		{
-			path = _getenv("PATH");
+/*			path = _getenv("PATH");
 			path_value = find_path(path);
-			command = concat_command(path_value, tokens[0]);
-			execute_child(tokens, command);
+			command = concat_command(path_value, tokens[0]);*/
+			execute_child(tokens);
 		}
 		else
 		{

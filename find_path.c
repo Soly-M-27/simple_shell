@@ -30,14 +30,14 @@ char **find_path(char *path_value)
  * @command: command to concatenate
  *
  * Return: full path to command to be executed
- */
-char *concat_command(char **dirs, char *command)
+
+void concat_command(char **dirs, char *command)
 {
 	int total = 0, i;
 	char *new_command;
 
 
-	/* loop to get total count of directories */
+	 loop to get total count of directories 
 	while (dirs[total])
 		total++;
 
@@ -46,7 +46,8 @@ char *concat_command(char **dirs, char *command)
 		dirs[i] = strcat(dirs[i], command);
 		printf("are we concatenating? %s\n", dirs[i]);
 	}
-	return (dirs);
-}
 
+	changed it to return void so that I can call the function that exectues file in here
+}
+*/
 
