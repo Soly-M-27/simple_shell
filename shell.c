@@ -17,17 +17,22 @@ int main(void)
 
 		/*receives user input and stores it in user_input*/
 		user_input = read_line();
-		printf("user input is: %s\n", user_input);
+
+		if (user_input[0] == '\0')
+			continue;
 
 		/* tokenizes user_input */
 		tokens = tokenize_input(user_input);
 
+		free(user_input);
+
 		if (_strcmp(tokens[0], "env") != 0)
+		{
 			execute_child(tokens);
+		}
 		else
 		{
-			free(tokens);
-			free(user_input);
+			free_grid(tokens);
 		}
 	}
 	return (0);
@@ -41,5 +46,6 @@ int main(void)
 void prompt(void)
 {
 	char *prompt = "#cisfun$ ";
+
 	write(STDOUT_FILENO, prompt, _strlen(prompt));
 }

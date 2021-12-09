@@ -16,7 +16,7 @@ extern char **environ;
 void prompt(void);
 char *read_line(void);
 char **tokenize_input(char *line);
-int execute_child(char ** tokens);
+int execute_child(char **tokens);
 
 /* function prototypes for built-ins */
 void display_env(void);
@@ -25,5 +25,6 @@ void display_env(void);
 int _strlen(char *s);
 int _strcmp(char *s1, char *s2);
 char *_getenv(const char *name);
+void free_grid(char **grid);
 
 #endif /*_MAIN_H_*/

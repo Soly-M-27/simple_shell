@@ -13,8 +13,8 @@ char **tokenize_input(char *line)
 
 	if (token == NULL)
 	{
-		perror(token[0]);
-		free(token);
+		free_grid(token);
+		free(line);
 		exit(EXIT_FAILURE);
 	}
 
@@ -30,7 +30,7 @@ char **tokenize_input(char *line)
 	if ((_strcmp(token[0], "exit") == 0) && token[1] == NULL)
 	{
 		free(line);
-		free(token);
+		free_grid(token);
 		exit(EXIT_SUCCESS);
 	}
 
@@ -50,6 +50,7 @@ char **tokenize_input(char *line)
 void display_env(void)
 {
 	unsigned int i = 0;
+
 	while (environ[i])
 	{
 		write(STDOUT_FILENO, environ[i], _strlen(environ[i]));
