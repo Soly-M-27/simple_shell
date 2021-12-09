@@ -17,11 +17,24 @@ to search the matching command line that is meant to be
 executed and if said command has no matches, an error will
 be sent to indicate failure of retrieval.
 
+## Function Prototypes
+
+* void prompt(void);
+* char \*read_line(void);
+* char \*\*tokenize_input(char \*line);
+* int execute_child(char \*\*tokens);
+* void display_env(void);
+* int \_strlen(char \*s);
+* int \_strcmp(char \*s1, char \*s2);
+* char \*\_getenv(const char \*name);
+* void free_grid(char \*\*grid);
+
+
 ## Compilation
 
 
 All files will be compiled with the following:
-gcc -Wall -Werror -Wextra -pedantic -std=gnu89 *.c main.h -o shell
+gcc -Wall -Werror -Wextra -pedantic -std=gnu89 \*.c main.h -o shell
 
 ## List of commands available
 
