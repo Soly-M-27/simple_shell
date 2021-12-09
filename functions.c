@@ -66,3 +66,26 @@ char *_getenv(const char *name)
 	}
 	return (NULL);
 }
+
+
+/**
+ * free_grid - Function that fress a 2 dimensional grid
+ * previously created by your alloc_grid.
+ * @grid: First int
+ * @height: Seconf int
+ *
+ * Return: void
+ */
+
+void free_grid(char **grid)
+{
+	int x, i;
+
+	while (grid[i])
+		i++;
+
+	for (x = 0; x < i; x++)
+		free(grid[x]);
+
+	free(grid);
+}
