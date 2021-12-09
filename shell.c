@@ -24,8 +24,6 @@ int main(void)
 		/* tokenizes user_input */
 		tokens = tokenize_input(user_input);
 
-		free(user_input);
-
 		if (_strcmp(tokens[0], "env") != 0)
 		{
 			execute_child(tokens);
