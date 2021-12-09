@@ -1,4 +1,4 @@
-0x16.C - Simple Shell
+# 0x16.C - Simple Shell
 ...
 
 ## Description
@@ -6,7 +6,7 @@
 
 This program runs a simple shell. This shell will
 execute the most basic commands present in the bash
-shell, while also having access to two built in commands,
+shell, while also having access to two built in commands:
 exit and env.
 
 ## Returns
@@ -64,5 +64,5 @@ functions.c - File that contains all author written frunctions for basic use
 ##Authors
 ...
 
-Amisaday Martínez Campos | @ammartica
-Solymar Sanchez Molina | @Soly-M-27
+Amisaday Martínez Campos | [@ammartica](https://github.com/ammartica)
+Solymar Sanchez Molina | @[Soly-M-27](https://github.com/Soly-M-27)
