@@ -61,8 +61,9 @@ display_env.c - Function that is called if user enters built in command env
 functions.c - File that contains all author written frunctions for basic use
 
 
-##Authors
+## Authors
 ...
 
 Amisaday Martínez Campos | [@ammartica](https://github.com/ammartica)
+
 Solymar Sanchez Molina | @[Soly-M-27](https://github.com/Soly-M-27)
