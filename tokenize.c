@@ -11,16 +11,10 @@ char **tokenize_input(char *line)
 	int i = 0;
 	char **token = malloc(1024 * sizeof(char *));
 
-	if (line == NULL)
-	{
-		free(line);
-		exit(EXIT_FAILURE);
-	}
-
 	if (token == NULL)
 	{
+		perror(token[0]);
 		free(token);
-		perror("ERROR\n");
 		exit(EXIT_FAILURE);
 	}
 
@@ -44,7 +38,6 @@ char **tokenize_input(char *line)
 	if ((_strcmp(token[0], "env") == 0) && token[1] == NULL)
 		display_env();
 
-	
 	return (token);
 }
 

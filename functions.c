@@ -18,25 +18,6 @@ int _strlen(char *s)
 }
 
 /**
- * _strncpy - copies a string
- * @dest: where the string will be copied to
- * @src: string to be copied
- * @n: total characters to be copied
- * Return: pointer to string dest
- */
-char *_strncpy(char *dest, char *src, int n)
-{
-	int i;
-
-	for (i = 0; i < n && src[i] != '\0'; i++)
-		dest[i] = src[i];
-	for ( ; i < n; i++)
-		dest[i] = '\0';
-
-	return (dest);
-}
-
-/**
  * _strcmp - compares two strings
  * @s1: first string
  * @s2: second string
@@ -58,31 +39,6 @@ int _strcmp(char *s1, char *s2)
 	{
 		return (*s1 - *s2);
 	}
-}
-
-/**
- * _strdup - duplicates string
- * @src: string to duplicate
- *
- * Return: duplicated string
- */
-char *_strdup(char *src)
-{
-	char *str;
-	char *p;
-	int len = 0;
-
-	while (src[len])
-		len++;
-
-	str = malloc(len + 1);
-	p = str;
-
-	while (*src)
-		*p++ = *src++;
-	*p = '\0';
-
-	return (str);
 }
 
 

@@ -7,28 +7,21 @@
  */
 char *read_line(void)
 {
-	int i = 0, len;
+	int len = 0;
 	size_t buffsize = 0;
 	char *line = NULL;
 	
 	len = getline(&line, &buffsize, stdin);
 
-	if (line == NULL)
-		exit(EXIT_FAILURE);
-
 	/* if ctrl + d then exit */
 	if (len == EOF)
 	{
-		if(isatty(STDIN_FILENO))
-			write(STDOUT_FILENO, "\n", 1);
 		free(line);
 		exit(EXIT_SUCCESS);
 	}
 
 	/*transforms enter into null byte*/
-	while (line[i] != '\n')
-		i++;
-	line[i] = '\0';
+	line[len - 1] = '\0';
 
 	return (line);
 }

@@ -17,17 +17,13 @@ int main(void)
 
 		/*receives user input and stores it in user_input*/
 		user_input = read_line();
+		printf("user input is: %s\n", user_input);
 
 		/* tokenizes user_input */
 		tokens = tokenize_input(user_input);
 
-		if ((_strcmp(tokens[0], "\n") != 0) && _strcmp(tokens[0], "env") != 0)
-		{
-/*			path = _getenv("PATH");
-			path_value = find_path(path);
-			command = concat_command(path_value, tokens[0]);*/
+		if (_strcmp(tokens[0], "env") != 0)
 			execute_child(tokens);
-		}
 		else
 		{
 			free(tokens);
