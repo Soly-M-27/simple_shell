@@ -25,8 +25,8 @@ gcc -Wall -Werror -Wextra -pedantic -std=gnu89 *.c main.h -o shell
 
 ## List of commands available
 
-*ls - lists all files in current working directories
-*pwd - Displays the current working directory
+* /bin/ls - lists all files in current working directory
+* /bin/ls -l - lists all files in current working directory in long format
 
 ## Builtins
 
@@ -38,27 +38,27 @@ by presinf CTRL-D.
 ## Files
 
 
-*README.md: Current file containing information about this project
+* README.md: Current file containing information about this project
 
-main.h - Heade file that contains all library and prototype functions
+* main.h - Heade file that contains all library and prototype functions
 
-shell.c - The simple shell itself and its main
+* shell.c - The simple shell itself and its main
 
-prompt.c - Prints the prompt for user to type in each time the shell
+* prompt.c - Prints the prompt for user to type in each time the shell
 repeats its cycle
 
-read_line.c - Function that gets input from user to match correct output
+* read_line.c - Function that gets input from user to match correct output
 or error message
 
-tokenize.c - Function that tokenizes whatever read_line.c retrieved to then
+* tokenize.c - Function that tokenizes whatever read_line.c retrieved to then
 send tokens through string compare functions created by the authors in order
 to dislay correct output based on commands lines entered by the user.
 
-execute.c - Function that forks pid along with its child process
+* execute.c - Function that forks pid along with its child process
 
-display_env.c - Function that is called if user enters built in command env
+* display_env.c - Function that is called if user enters built in command env
 
-functions.c - File that contains all author written frunctions for basic use
+* functions.c - File that contains all author written frunctions for basic use
 
 
 ## Authors
