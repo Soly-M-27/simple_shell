@@ -30,10 +30,9 @@ gcc -Wall -Werror -Wextra -pedantic -std=gnu89 *.c main.h -o shell
 
 ## Builtins
 
-*env - Displays the environment
+* env - Displays the environment
 
-*exit - For user to use whenever they desire to exit out of shell
-by presinf CTRL-D.
+* exit - For user to use whenever they desire to exit out of shell by presinf CTRL-D.
 
 ## Files
 
@@ -62,7 +61,7 @@ to dislay correct output based on commands lines entered by the user.
 
 
 ## Authors
-.
+
 Amisaday Martínez Campos | [@ammartica](https://github.com/ammartica)
 
 Solymar Sanchez Molina | [@Soly-M-27](https://github.com/Soly-M-27)
