@@ -1,10 +1,9 @@
 #include "main.h"
 
 /**
- * execute_command - executes a command
+ * execute_child - executes a command
  * @tokens: list of commands to be executed
- * @av: argument vector
- * Return:
+ * Return: 0
  */
 int execute_child(char **tokens)
 {

@@ -50,19 +50,19 @@ int _strcmp(char *s1, char *s2)
  */
 char *_getenv(const char *name)
 {
-	char **envPtr; /* pointer to environ */
-	char *charPtr; /* pointer to character in string in environ */
+	char **ePtr; /* pointer to environ */
+	char *cPtr; /* pointer to character in string in environ */
 	const char *namePtr; /*pointer to name we received */
 
-	for (envPtr = environ; *envPtr != NULL; envPtr++) /* iterate through environment variables */
+	for (ePtr = environ; *ePtr != NULL; ePtr++)
 	{   /* compares name to environment variable name */
-		for (charPtr = *envPtr, namePtr = name; *charPtr == *namePtr; charPtr++, namePtr++)
+		for (cPtr = *ePtr, namePtr = name; *cPtr == *namePtr; cPtr++, namePtr++)
 		{   /* makes sure to only compare name to env var name (not its value) */
-			if (*charPtr == '=')
+			if (*cPtr == '=')
 				break;
-		} /* when name equals env variable name, return the value of the env variable */
-		if ((*charPtr == '=') && (*namePtr == '\0'))
-			return (charPtr + 1);
+		}
+		if ((*cPtr == '=') && (*namePtr == '\0'))
+			return (cPtr + 1);
 	}
 	return (NULL);
 }
@@ -72,7 +72,6 @@ char *_getenv(const char *name)
  * free_grid - Function that fress a 2 dimensional grid
  * previously created by your alloc_grid.
  * @grid: First int
- * @height: Seconf int
  *
  * Return: void
  */

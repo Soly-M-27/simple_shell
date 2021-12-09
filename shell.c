@@ -23,7 +23,7 @@ int main(void)
 
 		/* tokenizes user_input */
 		tokens = tokenize_input(user_input);
-		
+
 		free(user_input);
 
 		if (_strcmp(tokens[0], "env") != 0)
@@ -46,5 +46,6 @@ int main(void)
 void prompt(void)
 {
 	char *prompt = "#cisfun$ ";
+
 	write(STDOUT_FILENO, prompt, _strlen(prompt));
 }

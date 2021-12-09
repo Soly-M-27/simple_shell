@@ -16,7 +16,7 @@ extern char **environ;
 void prompt(void);
 char *read_line(void);
 char **tokenize_input(char *line);
-int execute_child(char ** tokens);
+int execute_child(char **tokens);
 
 /* function prototypes for built-ins */
 void display_env(void);

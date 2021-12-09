@@ -10,7 +10,7 @@ char *read_line(void)
 	int len = 0;
 	size_t buffsize = 0;
 	char *line = NULL;
-	
+
 	len = getline(&line, &buffsize, stdin);
 
 	/* if ctrl + d then exit */
