@@ -6,14 +6,14 @@
 .SH SYNOPSIS
 .B #include\ "main.h"
 .br
-.B shell
+.B Simple Shell
 
 .SH DESCRIPTION
 .B shell
-is a simple shell with basic commands from the shell bash. After taking user
-input, this input will be sent as a string through a tokenizer function to
-varify the user information and match it to the correct basic command line 
-and/or built in commands.
+is a simple command interface that executes basic commands from the shell bash.
+After taking user input, this input will be sent as a string through a tokenizer
+function to varify the user information and match it to the correct basic command
+line and/or built in commands.
 
 .SH INITIALIZATION
 .B Compile with: $ gcc -Wall -Werror -Wextra -pedantic -std=gnu89 *.c main.h -o shell
@@ -96,11 +96,10 @@ vagrant@ubuntu-focal:~/shell_test/hell$
 .I Nothing else
 
 .SH BUGS
-*EOF file unnable to control
+* Unnable to chain commands through the PATH
 .br
-*Valgrind/Memory leaks
+* Valgrind/Memory leaks
 .br
-*ls command with PATH
 
 .SH AUTHORS
 .B Amisaday Martínez Campos & Solymar Sanchez Molina
