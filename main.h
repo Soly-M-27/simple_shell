@@ -25,5 +25,6 @@ void display_env(void);
 int _strlen(char *s);
 int _strcmp(char *s1, char *s2);
 char *_getenv(const char *name);
+void free_grid(char **grid);
 
 #endif /*_MAIN_H_*/

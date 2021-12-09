@@ -2,8 +2,8 @@
 
 /**
  * execute_command - executes a command
- * @tokens - list of commands to be executed
- *
+ * @tokens: list of commands to be executed
+ * @av: argument vector
  * Return:
  */
 int execute_child(char **tokens)
@@ -12,25 +12,19 @@ int execute_child(char **tokens)
 	int status;
 
 	child = fork();
-	if (child == -1)
-	{
-		free(tokens);
-		perror("./shell");
-		exit(EXIT_FAILURE);
-	}
-	else if (child == 0)
+	if (child == 0)
 	{
 		if (execve(tokens[0], tokens, NULL) == -1)
 		{
-			free(tokens);
-			perror("./shell");
+			free_grid(tokens);
+			perror("not found");
 			exit(EXIT_FAILURE);
 		}
+		free_grid(tokens);
 		exit(EXIT_SUCCESS);
 	}
 	else
 	{
-		free(tokens[0]);
 		wait(&status);
 	}
 	return (0);

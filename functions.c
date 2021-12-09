@@ -76,16 +76,26 @@ char *_getenv(const char *name)
  *
  * Return: void
  */
-
 void free_grid(char **grid)
 {
-	int x, i;
+	int i = 0;
 
-	while (grid[i])
+	while (grid[i] != NULL)
+	{
+		free(grid[i]);
+		grid[i] = NULL;
 		i++;
-
-	for (x = 0; x < i; x++)
-		free(grid[x]);
-
+	}
 	free(grid);
 }
+
+/**
+ * av_error - prints perror with av[0]
+ * @av: argument vector
+ * Return: VOID
+ */
+void av_error(char **av)
+{
+	perror(av[0]);
+}
+
