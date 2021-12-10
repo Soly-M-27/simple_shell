@@ -17,7 +17,7 @@ int execute_child(char **tokens)
 		{
 			free_grid(tokens);
 			perror("not found");
-			exit(EXIT_FAILURE);
+			return (-1);
 		}
 		exit(EXIT_SUCCESS);
 	}
