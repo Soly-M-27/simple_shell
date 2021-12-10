@@ -19,11 +19,12 @@ int execute_child(char **tokens)
 			perror("not found");
 			exit(EXIT_FAILURE);
 		}
-		free_grid(tokens);
 		exit(EXIT_SUCCESS);
 	}
 	else
+	{
 		wait(&status);
+	}
 
 	return (0);
 }
