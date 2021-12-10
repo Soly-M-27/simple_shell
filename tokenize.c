@@ -17,6 +17,7 @@ char **tokenize_input(char *line)
 		exit(EXIT_FAILURE);
 	}
 
+	/* creates tokens */
 	token[i] = strtok(line, " ");
 	while (token[i])
 	{
