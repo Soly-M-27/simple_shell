@@ -13,7 +13,6 @@ char **tokenize_input(char *line)
 
 	if (token == NULL)
 	{
-		free_grid(token);
 		free(line);
 		exit(EXIT_FAILURE);
 	}
