@@ -23,8 +23,7 @@ int execute_child(char **tokens)
 		exit(EXIT_SUCCESS);
 	}
 	else
-	{
 		wait(&status);
-	}
+
 	return (0);
 }
