@@ -9,7 +9,7 @@
 char **tokenize_input(char *line)
 {
 	int i = 0;
-	char **token = malloc(1024 * sizeof(char *));
+	char **token = (char **)malloc(1024 * sizeof(char *));
 
 	if (token == NULL)
 	{
@@ -27,10 +27,10 @@ char **tokenize_input(char *line)
 	token[i] = NULL;
 
 	/* exit built-in command */
-	if ((_strcmp(token[0], "exit") == 0) && token[1] == NULL)
+	if (_strcmp(token[0], "exit") == 0)
 	{
-		free(line);
 		free_grid(token);
+		free(line);
 		exit(EXIT_SUCCESS);
 	}
 
