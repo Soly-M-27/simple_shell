@@ -82,7 +82,6 @@ void free_grid(char **grid)
 	while (grid[i] != NULL)
 	{
 		free(grid[i]);
-		grid[i] = NULL;
 		i++;
 	}
 	free(grid);
