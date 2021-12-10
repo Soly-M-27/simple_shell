@@ -79,8 +79,9 @@ void free_grid(char **grid)
 {
 	int i = 0;
 
-	while (grid[i] != NULL)
+	while (grid[i] != NULL && grid[i + 1] != NULL )
 	{
+		printf("%s\n", grid[i]);
 		free(grid[i]);
 		i++;
 	}
