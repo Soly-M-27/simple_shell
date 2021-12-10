@@ -28,10 +28,9 @@ int main(void)
 		{
 			execute_child(tokens);
 		}
-		else
-		{
-			free_grid(tokens);
-		}
+
+		free_grid(tokens);
+		free(user_input);
 	}
 	return (0);
 }
