@@ -35,18 +35,37 @@ be sent to indicate failure of retrieval.
 
 
 All files will be compiled with the following:
+```
 gcc -Wall -Werror -Wextra -pedantic -std=gnu89 \*.c main.h -o shell
+```
 
-## List of commands available
+## List of modes available
+* Interactive mode - allows you to run the shell program and run commands
 
-* /bin/ls - lists all files in current working directory
-* /bin/ls -l - lists all files in current working directory in long format
+```
+$ ./hsh
+($) /bin/ls
+hsh main.c shell.c
+($)
+($) exit
+$
+```
 
-## Builtins
+* Non-interactive mode - allows you to pipe commands into the program
+
+```
+$ echo "/bin/ls" | ./hsh
+hsh main.c shell.c test_ls_2
+$
+```
+
+## Built-in commands
 
 * env - Displays the environment
 
-* exit - For user to use whenever they desire to exit out of shell by presinf CTRL-D.
+* exit - For user to use whenever they desire to exit the shell
+
+* CTRL + C - For user to use whenever they desire to exit the shell
 
 ## Files
 
