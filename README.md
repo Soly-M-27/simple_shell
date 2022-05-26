@@ -36,7 +36,7 @@ be sent to indicate failure of retrieval.
 
 All files will be compiled with the following:
 ```
-gcc -Wall -Werror -Wextra -pedantic -std=gnu89 \*.c main.h -o shell
+gcc -Wall -Werror -Wextra -pedantic -std=gnu89 *.c main.h -o hsh
 ```
 
 ## List of modes available
