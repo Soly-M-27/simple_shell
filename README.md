@@ -61,36 +61,26 @@ $
 
 ## Built-in commands
 
-* env - Displays the environment
-
-* exit - For user to use whenever they desire to exit the shell
-
-* CTRL + C - For user to use whenever they desire to exit the shell
+| Command | Description |
+| ----- | ------ |
+| env  | Displays the environment |
+| exit | For user to use whenever they desire to exit the shell |
+| CTRL + C | For user to use whenever they desire to exit the shell |
 
 ## Files
 
 
-* README.md: Current file containing information about this project
-
-* main.h - Heade file that contains all library and prototype functions
-
-* shell.c - The simple shell itself and its main
-
-* prompt.c - Prints the prompt for user to type in each time the shell
-repeats its cycle
-
-* read_line.c - Function that gets input from user to match correct output
-or error message
-
-* tokenize.c - Function that tokenizes whatever read_line.c retrieved to then
-send tokens through string compare functions created by the authors in order
-to dislay correct output based on commands lines entered by the user.
-
-* execute.c - Function that forks pid along with its child process
-
-* display_env.c - Function that is called if user enters built in command env
-
-* functions.c - File that contains all author written frunctions for basic use
+| Files | Description |
+| ----- | ------ |
+| README.md | Current file containing information about this project |
+| main.h | Header file that contains all library and prototype functions |
+| shell.c | The simple shell itself and its main |
+| prompt.c | Prints the prompt for user to type in each time the shell repeats its cycle |
+| read_line.c | Function that gets input from user to match correct output or error message |
+| tokenize.c | Function that tokenizes user input to then compare it to existing commands and execute them |
+| execute.c | Function that forks pid along with its child process |
+| display_env.c | Function that is called if user enters built in command env |
+| functions.c | File that contains all author written frunctions for basic use |
 
 
 ## Authors
